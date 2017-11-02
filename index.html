@@ -47,26 +47,29 @@
 
           <ul class="user-menu">
             <li class="user-menu__item">
-              <form class="search" action="https://echo.htmlacademy.ru" method="post">
+              <form class="form  search" action="https://echo.htmlacademy.ru" method="post">
                 <label class="visually-hidden" for="search">Поле поиска по сайту</label>
-                <input class="search__input" type="search" id="search" name="search" placeholder="Поиск по сайту">
+                <input class="form__input" type="search" id="search" name="search" placeholder="Поиск по сайту">
                 <input class="search__submit" type="submit" name="submit" value="Найти">
               </form>
             </li>
             <li class="user-menu__item">
-              <a href="#" class="user-menu__link">Вход</a>
-              <form class="form-login" action="https://echo.htmlacademy.ru" method="post">
-                <p class="form-login__field">
+              <a href="#" class="user-menu__link">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#ffffff"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
+                Вход
+              </a>
+              <form class="form  form--login" action="https://echo.htmlacademy.ru" method="post">
+                <p class="form__field">
                   <label for="user-email" class="visually-hidden"></label>
-                  <input class="form-login__email" id="user-email" type="email" name="email" placeholder="Электронная почта">
+                  <input class="form__input" id="user-email" type="email" name="email" placeholder="Электронная почта">
                 </p>
-                <p class="form-login__field">
+                <p class="form__field">
                   <label for="user-password" class="visually-hidden"></label>
-                  <input class="form-login__password" id="user-password" type="password" name="password" placeholder="Пароль">
+                  <input class="form__input" id="user-password" type="password" name="password" placeholder="Пароль">
                 </p>
                 <button class="btn">Войти</button>
-                <a href="#" class="form-login__link">Забыли пароль?</a>
-                <a href="#" class="form-login__link">Новая регистрация</a>
+                <a href="#" class="form__link">Забыли пароль?</a>
+                <a href="#" class="form__link">Новая регистрация</a>
               </form>
             </li>
             <li class="user-menu__item">
@@ -233,18 +236,18 @@
       <section class="modal  modal--feedback">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <b class="modal__slogan">Мы обязательно вам ответим!</b>
-        <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
+        <form class="form  form-feedback" action="https://echo.htmlacademy.ru" method="post">
           <p class="form-feedback__item">
             <label for="feedback-name">Представьтесь</label>
-            <input type="text" id="feedback-name" name="name" placeholder="Как Вас зовут?" required>
+            <input class="form__input" type="text" id="feedback-name" name="name" placeholder="Как Вас зовут?" required>
           </p>
           <p class="form-feedback__item">
             <label for="feedback-email">Ваша почта</label>
-            <input type="email" id="feedback-email" name="email" placeholder="Ваша почта для ответа?" required>
+            <input class="form__input" type="email" id="feedback-email" name="email" placeholder="Ваша почта для ответа?" required>
           </p>
           <p class="form-feedback__item">
             <label for="feedback-text">Текст письма:</label>
-            <textarea id="feedback-text" name="letter" rows="10" required>В свободной форме</textarea>
+            <textarea class="form__input" id="feedback-text" name="letter" rows="10" required>В свободной форме</textarea>
           </p>
           <button class="btn" type="submit">Отправить</button>
         </form>

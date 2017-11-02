@@ -60,6 +60,71 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.form {
+  background-color: #f8f7f4;
+  border-radius: 4px;
+}
+
+.form__input {
+  box-sizing: border-box;
+  padding: 10px 14px;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+
+  background-color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px #d3d3d2;
+
+  outline: none;
+}
+
+.form__input::placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+.form__input:hover {
+  box-shadow: inset 0 0 0 2px #9a9a9a;
+}
+
+.form__input:focus {
+  box-shadow: inset 0 0 0 2px #2e88e4;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 26px;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  vertical-align: top;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  background-color: #f26843;
+  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  border: none;
+  border-radius: 28px;
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+}
+
+.btn:hover,
+.btn:focus {
+  background-image: linear-gradient( 90deg, rgb(236,111,94) 0%, rgb(245,134,105) 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
+}
+
+.btn:active {
+  background-image: linear-gradient( 90deg, rgb(225,97,62) 0%, rgb(215,70,50) 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24);
+}
+
 .site-wrapper {
   min-width: 940px;
   width: 1200px;
@@ -134,14 +199,12 @@ input[type="radio"].visually-hidden {
   border-radius: 15px;
 }
 
-.main-nav__link:hover,
-.main-nav__link:focus {
+.main-nav__item:hover .main-nav__link,
+.main-nav__item:focus .main-nav__link {
   color: #000000;
   text-decoration: none;
   background-color: #ffffff;
 }
-
-
 
 .sub-menu {
   position: absolute;
@@ -152,9 +215,11 @@ input[type="radio"].visually-hidden {
   display: none;
 
   background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
 }
 
-.main-nav__link--catalog:hover .sub-menu {
+.main-nav__item--catalog:hover .sub-menu {
   display: block;
 }
 
@@ -183,4 +248,27 @@ input[type="radio"].visually-hidden {
 
 .user-menu {
   width: 23%;//262px;
+}
+
+.search {
+  position: relative;
+
+  width: 340px;
+  padding: 20px 15px;
+}
+
+.user-menu__link {
+  position: relative;
+  display: block;
+  padding: 8px 0;
+  padding-right: 16px;
+  padding-left: 44px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  background-color: #9eb2a7;
+}
+
+.form-login {
+
 }
