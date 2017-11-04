@@ -17,10 +17,14 @@
           <nav class="main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__item  main-nav__item--catalog">
-                <a class="main-nav__link bordered-link" href="#">Каталог</a>
+                <a class="main-nav__link" href="#">
+                <span class="bordered">Каталог</span>
+              </a>
                 <ul class="sub-menu">
                   <li class="sub-menu__item">
-                    <a class="sub-menu__link  sub-menu__link--group-title">Новинки</a>
+                    <a class="sub-menu__link  sub-menu__link--group-title">
+                    <span class="bordered">Новинки</span>
+                  </a>
                   </li>
                   <li class="sub-menu__item">
                     <a class="sub-menu__link" href="#">Сливочное</a>
@@ -37,24 +41,30 @@
                 </ul>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link bordered-link" href="#">Доставка и оплата</a>
+                <a class="main-nav__link" href="#">
+                <span class="bordered">Доставка и оплата</span>
+              </a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link bordered-link" href="#">О Компании</a>
+                <a class="main-nav__link" href="#">
+                  <span class="bordered">О Компании</span>
+                </a>
               </li>
             </ul>
           </nav>
 
           <ul class="user-menu">
-            <li class="user-menu__item">
-              <form class="form  search" action="https://echo.htmlacademy.ru" method="post">
+            <li class="user-menu__item  user-menu__item--search">
+              <a class="user-menu__link" href="#">
+                <span class="visually-hidden">Поиск по сайту</span>
+              </a>
+              <form class="form  form--search" action="https://echo.htmlacademy.ru" method="post">
                 <label class="visually-hidden" for="search">Поле поиска по сайту</label>
-                <input class="form__input" type="search" id="search" name="search" placeholder="Поиск по сайту">
-                <input class="search__submit" type="submit" name="submit" value="Найти">
+                <input class="form__input" type="search" id="search" name="search" placeholder="Что ищем?">
               </form>
             </li>
-            <li class="user-menu__item">
-              <a href="#" class="user-menu__link">
+            <li class="user-menu__item  user-menu__item--login">
+              <a class="user-menu__link  user-menu__link--login" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#ffffff"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
                 Вход
               </a>
@@ -68,12 +78,21 @@
                   <input class="form__input" id="user-password" type="password" name="password" placeholder="Пароль">
                 </p>
                 <button class="btn">Войти</button>
-                <a href="#" class="form__link">Забыли пароль?</a>
-                <a href="#" class="form__link">Новая регистрация</a>
+                <p class="form__links">
+                  <a href="#" class="form__link">
+                    <span class="bordered--bg-white">Забыли пароль?</span>
+                  </a>
+                  <a href="#" class="form__link">
+                  <span class="bordered--bg-white">Новая регистрация</span></a>
+                </p>
               </form>
             </li>
-            <li class="user-menu__item">
-              <a href="#" class="user-menu__link">Пусто</a>
+            <li class="user-menu__item  user-menu__item--cart">
+              <a class="user-menu__link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g>
+                </svg>
+                Пусто
+              </a>
             </li>
           </ul>
 
@@ -129,16 +148,24 @@
             <h2 class="top-products__title visually-hidden">топ-продаж</h2>
             <ul class="top-products__list">
               <li class="top-products__item">
-                <a class="top-products__link bordered-link" href="catalog.html">Сливочное с апельсиновым джемом и цитрусовой стружкой </a>
+                <a class="top-products__link" href="catalog.html">
+                <span class="bordered">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+                 </a>
               </li>
               <li class="top-products__item">
-                <a class="top-products__link bordered-link" href="catalog.html">Сливочно-кофейное с кусочками шоколада</a>
+                <a class="top-products__link" href="catalog.html">
+                <span class="bordered">Сливочно-кофейное с кусочками шоколада</span>
+              </a>
               </li>
               <li class="top-products__item">
-                <a class="top-products__link bordered-link" href="catalog.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                <a class="top-products__link" href="catalog.html">
+                <span class="bordered">Сливочно-клубничное с присыпкой из белого шоколада</span>
+              </a>
               </li>
               <li class="top-products__item">
-                <a class="top-products__link bordered-link" href="catalog.html">Сливочное крем-брюле с карамельной подливкой</a>
+                <a class="top-products__link" href="catalog.html">
+                  <span class="bordered">Сливочное крем-брюле с карамельной подливкой</span>
+                </a>
               </li>
             </ul>
           </section>
@@ -210,16 +237,16 @@
 
           <ul class="about">
             <li class="about__item">
-              <a class="about__link  about__link--providers bordered-link" href="#">Для поставщиков</a>
+              <a class="about__link  about__link--providers bordered" href="#">Для поставщиков</a>
             </li>
             <li class="about__item">
-              <a class="about__link  about__link--docs bordered-link" href="#">Наши документы</a>
+              <a class="about__link  about__link--docs bordered" href="#">Наши документы</a>
             </li>
             <li class="about__item">
-              <a class="about__link  about__link--production bordered-link" href="#">О производстве </a>
+              <a class="about__link  about__link--production bordered" href="#">О производстве </a>
             </li>
             <li class="about__item">
-              <a class="about__link  about__link--eco bordered-link" href="#">Экологические стандарты</a>
+              <a class="about__link  about__link--eco bordered" href="#">Экологические стандарты</a>
             </li>
           </ul>
 
@@ -228,7 +255,9 @@
               <img class="copyright__image" src="img/" alt="Логотип HTMLAcademy" width="" height="">
             </a>
             <p class="copyright__text"> Сделано в
-              <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright__link bordered-link">HTML Academy</a>
+              <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright__link">
+                <span class="bordered">HTML Academy</span>
+              </a>
               &copy;2017
             </p>
           </div>
