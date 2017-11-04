@@ -36,6 +36,7 @@ body {
 }
 
 img {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -62,6 +63,49 @@ input[type="radio"].visually-hidden {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/*----common-classes----*/
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  vertical-align: top;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  background-color: #f26843;
+  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  border: none;
+  border-radius: 28px;
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  outline: none;
+
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-image: linear-gradient( 90deg, rgb(236,111,94) 0%, rgb(245,134,105) 100%);
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 1);
+}
+
+.btn:active {
+  background-image: linear-gradient( 90deg, rgb(225,97,62) 0%, rgb(215,70,50) 100%);
+  box-shadow: inset 0px 2px 2px rgb(148, 39, 24);
+}
+
+.bordered {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bordered--bg-white {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .form {
@@ -120,43 +164,19 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 25px;
-
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-  vertical-align: top;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-  background-color: #f26843;
-  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  border: none;
-  border-radius: 28px;
-  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+.form__link:hover,
+.form__link:focus,
+.form__link:active {
+  color: rgba(232, 77, 55, 1);
 }
 
-.btn:hover,
-.btn:focus {
-  background-image: linear-gradient( 90deg, rgb(236,111,94) 0%, rgb(245,134,105) 100%);
-  box-shadow: 0px 2px 2px rgba(172, 16, 0, 1);
+.form__link:hover span,
+.form__link:focus span,
+.form__link:active span {
+  border-color: rgba(232, 77, 55, 0.3);
 }
 
-.btn:active {
-  background-image: linear-gradient( 90deg, rgb(225,97,62) 0%, rgb(215,70,50) 100%);
-  box-shadow: inset 0px 2px 2px rgb(148, 39, 24);
-}
-
-.bordered {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.bordered--bg-white {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
+/*----page-style*/
 
 .site-wrapper {
   min-width: 940px;
@@ -170,9 +190,12 @@ input[type="radio"].visually-hidden {
   outline: 1px solid yellow;//сетка
 }
 
+/*----header----*/
+
 .page-header {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   padding-top: 9px;
 }
@@ -238,6 +261,7 @@ input[type="radio"].visually-hidden {
 .main-nav__link:focus {
   color: #333333;
   background-color: #ffffff;
+  outline: none;
 }
 
 .sub-menu {
@@ -294,6 +318,7 @@ input[type="radio"].visually-hidden {
 .sub-menu__item:hover a[href],
 .sub-menu__item:focus a[href] {
   background-color: #fbded7;
+  outline: none;
 }
 
 .sub-menu__item:active a[href] {
@@ -310,6 +335,7 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
 
   width: 23%;//262px;
+  padding-top: 14px;
 }
 
 .user-menu__item {
@@ -320,9 +346,11 @@ input[type="radio"].visually-hidden {
   align-items: flex-start;
 
   margin-right: 10px;
+  padding-bottom: 10px;
 }
 
 .user-menu__item:last-child {
+  flex-grow: 1;
   margin-right: 0;
 }
 
@@ -342,14 +370,15 @@ input[type="radio"].visually-hidden {
 }
 
 .user-menu__item--search .user-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 32px;
   height: 32px;
   padding: 0;
 
   border-radius: 100%;
-  background-image: url("../img/svg-gllacy/loupe.svg");
-  background-repeat: no-repeat;
-  background-position: 8px 8px;
 }
 
 .user-menu__item--cart .user-menu__link {
@@ -358,8 +387,37 @@ input[type="radio"].visually-hidden {
   padding-right: 34px;
 }
 
+.user-menu__item--cart-empty {
+  pointer-events: none;
+}
+
 .user-menu__link svg {
   margin-right: 8px;
+}
+
+.user-menu__link .loupe-icon {
+  margin: 0;
+}
+
+.user-menu__link:hover,
+.user-menu__link:focus {
+  color: #323232;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.user-menu__link:hover svg,
+.user-menu__link:focus svg {
+  fill: #000000;
+}
+
+.user-menu .form {
+  display: none;
+}
+
+.user-menu__item:hover .form,
+.user-menu__item:focus .form {
+  display: flex;
 }
 
 .form--search,
@@ -393,5 +451,15 @@ input[type="radio"].visually-hidden {
 
 .form--login .btn {
   width: 100px;
-  margin-right: 20px;
+  margin-right: auto;
+}
+
+.page-header__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  width: 22%;
+  margin-top: -6px;
+  margin-left: auto;
 }
