@@ -881,6 +881,11 @@ input[type="radio"].visually-hidden {
 }
 
 .subscribe {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.subscribe__container {
   box-sizing: border-box;
   padding-top: 30px;
   padding-right: 20px;
@@ -888,32 +893,11 @@ input[type="radio"].visually-hidden {
 
   background: #f8f7f4;
 
-
   border: 6px solid red;
-  border-radius: 12px;
-  /*border-image-slice: 8;
-  border-image-source: repeating-linear-gradient(-45deg, #b37b7a , #b37b7a 10px, transparent 10px, transparent 20px, #7897ba 20px, #7897ba 30px,transparent 30px, transparent 40px);
-  border-image-width: 5px;*/
+  border-image-slice: 10;
+  border-image-source: repeating-linear-gradient(-45deg, #fe9e90, #fe9e90 10px, transparent 10px, transparent 20px, #92cdff 20px, #92cdff 30px,transparent 30px, transparent 40px);
+  border-image-width: 6px;
 }
-
-/*.subscribe::after {
-  content: "";
-
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  z-index: -1;
-
-  width: 100%;
-  height: 100%;
-
-  background-image: url("../img/svg-gllacy/bg-post.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  border-radius: 12px;
-}*/
 
 .subscribe__text {
   margin: 0;
@@ -937,12 +921,12 @@ input[type="radio"].visually-hidden {
 
 .subscribe__form .form__field {
   width: 74%;
+  margin-bottom: 0;
 }
 
 .email__submit {
   margin-left: 10px;
 }
-
 
 /*----contacts----*/
 
@@ -981,6 +965,10 @@ input[type="radio"].visually-hidden {
   margin-bottom: 18px;
 }
 
+.feedback__text td {
+  padding: 0;
+}
+
 .feedback__field,
 .feedback__data span {
   font-size: 14px;
@@ -1005,7 +993,7 @@ input[type="radio"].visually-hidden {
 }
 
 .feedback__data span {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 
