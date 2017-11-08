@@ -82,7 +82,7 @@
                   <form class="form  form--login" action="https://echo.htmlacademy.ru" method="post">
                     <p class="form__field">
                       <label for="user-email" class="visually-hidden"></label>
-                      <input class="form__input" id="user-email" type="email" name="email" placeholder="Электронная почта">
+                      <input class="form__input" id="user-email" type="email" name="user-email" placeholder="Электронная почта">
                     </p>
                     <p class="form__field">
                       <label for="user-password" class="visually-hidden"></label>
@@ -244,28 +244,30 @@
 
             <section class="features">
               <h2 class="features__heading visually-hidden">наши преимущества</h2>
-              <ul class="features__list">
-                <li class="features__item  features__item--techno"></li>
-                <li class="features__item  features__item--farm"></li>
-                <li class="features__item  features__item--eco"></li>
-                <li class="features__item  features__item--termo"></li>
+              <p class="features__slogan">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+              <ul class="features__list row">
+                <li class="features__item  features__item--techno col-2">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+                <li class="features__item  features__item--eco col-2">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+                <li class="features__item  features__item--farm col-2">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
+                <li class="features__item  features__item--termo col-2">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
               </ul>
             </section>
 
             <div class="news-container row">
               <section class="news col-2">
-                <h2 class="news__heading">10 способов сервировки
-                фруктовых щербетов к
-                столу</h2>
-                <span class="news__theme">10 способов сервировки фруктовых щербетов к столу</span>
+                <h2 class="news__heading">Новое в нашем блоге</h2>
+                <p class="news__theme">10 способов сервировки фруктовых щербетов к столу</p>
               </section>
 
               <section class="subscribe col-2">
-                <h2 class="subscribe__title visually-hidden">Подписка</h2>
+                <h2 class="subscribe__title visually-hidden">Подписка на рассылку</h2>
                 <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-                <form class="email" action="https://echo.htmlacademy.ru" method="post">
-                  <input class="email__input" type="email">
-                  <button class="email__submit">Отправить</button>
+                <form class="subscribe__form form" action="https://echo.htmlacademy.ru" method="post">
+                  <p class="form__field">
+                    <label for="ss-email"></label>
+                    <input class="email__input form__input" type="email" id="ss-email" name="ss-email" placeholder="Электронная почта">
+                  </p>
+                  <button class="email__submit btn">Отправить</button>
                 </form>
               </section>
             </div>
@@ -277,23 +279,23 @@
 
             <div class="map">
               <a href="#" class="map__link">
-                <img class="map__image" src="img/" alt="расположение на карте магазина Gllacy" width="" height="">
+                <img class="map__image" src="img/map.jpg" alt="расположение на карте магазина Gllacy" width="1200" height="430">
               </a>
             </div>
 
             <section class="feedback">
-              <h2 class="feedback__title">Обратная связь</h2>
+              <h2 class="feedback__title visually-hidden">Обратная связь</h2>
               <table class="feedback__text">
                 <tr class="feedback__address">
-                  <td>Адрес главного офиса и офлайн магазина:</td>
-                  <td>ул. Большая Конюшенная 19/8, Санкт-Петербург</td>
+                  <td class="feedback__field">Адрес главного офиса и&nbsp;офлайн магазина:</td>
+                  <td class="feedback__data">ул. Большая Конюшенная 19/8, Санкт-Петербург</td>
                 </tr>
                 <tr class="feedback__phone">
-                  <td>Для заказов по телефону:</td>
-                  <td>8 812 450-25-25<span>(с 10 до 20 ежедневно)</span></td>
+                  <td class="feedback__field">Для заказов по телефону:</td>
+                  <td class="feedback__data">8 812 450-25-25<span>(с 10 до 20 ежедневно)</span></td>
                 </tr>
               </table>
-              <a href="#" class="feedback__link">Форма обратной связи</a>
+              <a href="#" class="feedback__link btn">Форма обратной связи</a>
             </section>
           </section>
 
