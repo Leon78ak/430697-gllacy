@@ -1067,9 +1067,6 @@ input[type="radio"].visually-hidden {
 
 .social {
   font-size: 0;
-
-  width: 266px;
-  margin-right: 133px;
 }
 
 .social__link {
@@ -1114,12 +1111,17 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/svg-gllacy/vk.svg");
 }
 
+.page-footer__wrapper {
+
+}
+
 .about {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
-  width: 350px;//сетка
+  width: 347px;
+  margin: 0 auto;
 }
 
 .about__item {
@@ -1132,7 +1134,7 @@ input[type="radio"].visually-hidden {
 }
 
 .about__item:nth-child(2n) {
-  width: 184px;
+  width: 181px;
 }
 
 .about a {
@@ -1142,6 +1144,11 @@ input[type="radio"].visually-hidden {
 }
 
 .copyright {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.copyright__inner {
   margin-left: auto;
 }
 
@@ -1176,7 +1183,7 @@ input[type="radio"].visually-hidden {
   z-index: 100;
   box-sizing: border-box;
 
-  // display: none;
+  display: none;
   width: 478px;
   padding: 24px;
   padding-top: 18px;
