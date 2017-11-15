@@ -72,18 +72,20 @@
                 <li class="user-menu__item user-menu__item--login">
                   <a class="user-menu__link user-menu__link--login" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19" fill="#ffffff">
-                      <g><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g>
+                      <g>
+                        <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
+                      </g>
                     </svg>
                     Вход
                   </a>
                   <form class="form form--login" action="https://echo.htmlacademy.ru" method="post">
                     <p class="form__field">
-                      <label for="user-email" class="visually-hidden"></label>
-                      <input class="form__input" id="user-email" type="email" name="user-email" placeholder="Электронная почта">
+                      <label for="login-user-email" class="visually-hidden"></label>
+                      <input class="form__input" id="login-user-email" type="email" name="user-email" placeholder="Электронная почта">
                     </p>
                     <p class="form__field">
-                      <label for="user-password" class="visually-hidden"></label>
-                      <input class="form__input" id="user-password" type="password" name="password" placeholder="Пароль">
+                      <label for="login-user-password" class="visually-hidden"></label>
+                      <input class="form__input" id="login-user-password" type="password" name="password" placeholder="Пароль">
                     </p>
                     <button class="btn" type="submit">Войти</button>
                     <p class="form__links">
@@ -175,7 +177,7 @@
             <form class="form-filter" action="https://echo.htmlacademy.ru" method="post">
               <fieldset class="form-filter__group form-filter__group--select">
                 <legend>Сортировка:</legend>
-                <select name="sort" id="user-sort">
+                <select name="sort" id="filter-sort">
                   <option value="popular">по популярности</option>
                   <option value="low">сначала недорогие</option>
                   <option value="high">сначала дорогие</option>
@@ -199,47 +201,47 @@
               <fieldset class="form-filter__group form-filter__group--radio">
                 <legend>Жирность:</legend>
                 <ul class="form-filter__list">
-                  <li class="form-filter__item">
-                    <input class="form-filter__radio" type="radio" name="fat" value="0" id="zero">
-                    <label for="zero"></label>
+                  <li class="form-filter__item form-filter__item--radio">
+                    <input class="form-filter__radio" type="radio" name="fat" value="0" id="filter-zero">
+                    <label for="filter-zero">0%</label>
                   </li>
-                  <li class="form-filter__item">
-                    <input class="form-filter__radio" type="radio" name="fat" value="less10" id="less10"checked>
-                    <label for="less10"></label>
+                  <li class="form-filter__item form-filter__item--radio">
+                    <input class="form-filter__radio" type="radio" name="fat" value="less10" id="filter-less10"checked>
+                    <label for="filter-less10">до 10%</label>
                   </li>
-                  <li class="form-filter__item">
-                    <input class="form-filter__radio" type="radio" name="fat" value="less30" id="less30">
-                    <label for="less30"></label>
+                  <li class="form-filter__item form-filter__item--radio">
+                    <input class="form-filter__radio" type="radio" name="fat" value="less30" id="filter-less30">
+                    <label for="filter-less30">до 30%</label>
                   </li>
-                  <li class="form-filter__item">
-                    <input class="form-filter__radio" type="radio" name="fat" value="more30" id="more30">
-                    <label for="more30"></label>
+                  <li class="form-filter__item form-filter__item--radio">
+                    <input class="form-filter__radio" type="radio" name="fat" value="more30" id="filter-more30">
+                    <label for="filter-more30">выше 30%</label>
                   </li>
                 </ul>
               </fieldset>
 
               <fieldset class="form-filter__group form-filter__group--checkbox">
-                <legend>Наполнители:</legend*>
+                <legend>Наполнители:</legend>
                 <ul class="form-filter__list">
                   <li class="form-filter__item">
-                    <input class="form-filter__checkbox" type="checkbox" name="choco" id="choco" checked></input>
-                    <label for="choco">шоколадные</label>
+                    <input class="form-filter__checkbox" type="checkbox" name="choco" id="filter-choco" checked></input>
+                    <label for="filter-choco">шоколадные</label>
                   </li>
                   <li class="form-filter__item">
-                    <input class="form-filter__checkbox" type="checkbox" name="sugar" id="sugar" checked></input>
-                    <label for="sugar">сахарные присыпки</label>
+                    <input class="form-filter__checkbox" type="checkbox" name="sugar" id="filter-sugar" checked></input>
+                    <label for="filter-sugar">сахарные присыпки</label>
                   </li>
                   <li class="form-filter__item">
-                    <input class="form-filter__checkbox" type="checkbox" name="fruit" id="fruit"></input>
-                    <label for="fruit">фрукты</label>
+                    <input class="form-filter__checkbox" type="checkbox" name="fruit" id="filter-fruit"></input>
+                    <label for="filter-fruit">фрукты</label>
                   </li>
                   <li class="form-filter__item">
-                    <input class="form-filter__checkbox" type="checkbox" name="syrup" id="syrup"></input>
-                    <label for="syrup">сиропы</label>
+                    <input class="form-filter__checkbox" type="checkbox" name="syrup" id="filter-syrup"></input>
+                    <label for="filter-syrup">сиропы</label>
                   </li>
                   <li class="form-filter__item">
-                    <input class="form-filter__checkbox" type="checkbox" name="jam" id="jam"></input>
-                    <label for="jam">джемы</label>
+                    <input class="form-filter__checkbox" type="checkbox" name="jam" id="filter-jam"></input>
+                    <label for="filter-jam">джемы</label>
                   </li>
                 </ul>
               </fieldset>
