@@ -414,9 +414,11 @@ input[type="radio"].visually-hidden {
   background-color: #f6b5a5;
 }
 
-.sub-menu__link .active {
+.sub-menu__item--current a {
   color: #ffffff;
   background-color: #d07058;
+
+  cursor: default;
 }
 
 .user-menu {
@@ -1206,7 +1208,6 @@ input[type="radio"].visually-hidden {
 
   display: none;
   width: 478px;
-  padding: 24px;
   padding-top: 18px;
 
   background-color: #f8f7f4;
@@ -1216,24 +1217,88 @@ input[type="radio"].visually-hidden {
 
 .modal__slogan {
   margin: 0;
-  margin-bottom: 17px;
+  margin-left: 25px;
 
   font-size: 24px;
   line-height: 28px;
   color: #323232;
 }
 
-.form-feedback {
-  padding: 0;
+.modal__close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+
+
+  width: 23px;
+  height: 23px;
+
+  font-size: 0;
+
+  border: 0;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.modal__close::before,
+.modal__close::after   {
+  content: "";
+
+  position: absolute;
+  top: 12px;
+  left: 1px;
+
+  width: 23px;
+  height: 3px;
+
+  background-color: #999999;
+}
+
+.modal__close::before {
+  transform: rotate(45deg);
+}
+
+.modal__close::after {
+  transform: rotate(-45deg);
+}
+
+// .modal__close:hover,
+// .modal__close:focus  {
+//   background-color: #f0c52e;
+// }
+
+// .modal__close:active  {
+//   background-color: #faedc0;
+// }
+
+.form.form-feedback {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 0;
+  padding: 25px;
 }
 
 .form-feedback__field {
   width: 267px;
 }
 
+.form-feedback .form__input {
+  font-size: 16px;
+}
+
 .form-feedback__textarea {
   width: 100%;
   margin-bottom: 25px;
+}
+
+.form-feedback__btn {
+  margin-left: auto;
+}
+
+.modal-show {
+  display: block;
 }
 
 /* ----overlay---- */
@@ -1249,7 +1314,7 @@ input[type="radio"].visually-hidden {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.overlay--show {
+.overlay-show {
   display: block;
 }
 
@@ -1673,9 +1738,8 @@ input[type="radio"].visually-hidden {
   border-color: rgba(255, 255, 255, 1);
 }
 
-.form-filter__radio:focus + label::before {
-  border-color: #663d15;
-  border-radius: 50%;
+.form-filter__radio:focus + label::before,
+.form-filter__checkbox:focus + label::before {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
@@ -1737,7 +1801,7 @@ input[type="radio"].visually-hidden {
 }
 
 .form-filter__checkbox:checked ~ label:active::before {
-    background-image: url("../img/svg-gllacy/checkbox-off.svg");
+  background-image: url("../img/svg-gllacy/checkbox-off.svg");
 }
 
 .btn--filter {

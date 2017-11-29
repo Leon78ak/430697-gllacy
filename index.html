@@ -381,21 +381,24 @@
         <form class="form form-feedback" action="https://echo.htmlacademy.ru" method="post">
           <p class="form__field form-feedback__field">
             <label for="feedback-name"></label>
-            <input class="form__input" type="text" id="feedback-name" name="name" placeholder="Как Вас зовут?" required>
+            <input class="form__input" type="text" id="feedback-name" name="user-name" placeholder="Как Вас зовут?" required>
           </p>
           <p class="form__field form-feedback__field">
             <label for="feedback-email"></label>
-            <input class="form__input" type="email" id="feedback-email" name="email" placeholder="Ваша почта для ответа?" required>
+            <input class="form__input" type="user-email" id="feedback-email" name="email" placeholder="Ваша почта для ответа?" required>
           </p>
           <p class="form__field form-feedback__textarea">
             <label for="feedback-text"></label>
             <textarea class="form__input" id="feedback-text" name="letter" rows="6" placeholder="Напишите что-нибудь..." required></textarea>
           </p>
-          <button class="btn" type="submit">Отправить</button>
+          <button class="btn form-feedback__btn" type="submit">Отправить</button>
         </form>
+        <button class="modal__close" type="button" title="Закрыть">Закрыть</button>
       </section>
 
       <div class="overlay"></div>
     </div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
