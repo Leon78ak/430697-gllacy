@@ -1853,9 +1853,10 @@ input[type="radio"].visually-hidden {
 
 .pagination__list .disabled {
   opacity: 0.2;
+  pointer-events: none;
 }
 
-.pagination__item a {
+.pagination__link {
   box-sizing: border-box;
   display: inline-block;
 
@@ -1873,17 +1874,17 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
-.pagination__item a:hover,
-.pagination__item a:focus {
+.pagination__link:hover,
+.pagination__link:focus {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.pagination__item a:active {
+.pagination__link:active {
   color: #323232;
   background-color: #ffffff;
 }
 
-.pagination__item--current a {
+.pagination__link--current {
   color: #323232;
   background-color: #ffffff;
 
